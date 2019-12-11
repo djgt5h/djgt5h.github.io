@@ -1,0 +1,85 @@
+
+    .frame {
+      width: 500px;
+      min-width: 500px;
+      height: 300px;
+      min-height: 300px;
+      border: 5px solid whitesmoke;
+      box-shadow: 1px 1px 5px gray;
+      position: relative;
+      overflow: hidden;
+    }
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .slide-animation-1 {
+      animation: switch-slide-1 10s ease-in-out infinite;
+    }
+    .slide-animation-2 {
+      animation: switch-slide-2 10s ease-in-out infinite;
+    }
+    .slide-animation-3 {
+      animation: switch-slide-3 10s ease-in-out infinite;
+    }
+    .slide-animation-4 {
+      animation: switch-slide-4 10s ease-in-out infinite;
+    }
+    @keyframes switch-slide-1 {
+      0%   { opacity: 1; left: 0px; }
+      /* 展示 */
+      20%  { opacity: 1; left: 0px; }
+      /* 切出 */
+      25%  { opacity: 0; left: 500px; }
+      /* 归位 */
+      26%  { opacity: 0; left: -500px; }
+      /* 等待 */
+      95%  { opacity: 0; left: -500px; }
+      /* 切入 */
+      100% { opacity: 1; left: 0px; }
+    }
+    @keyframes switch-slide-2 {
+      0%   { opacity: 0; left: -500px; }
+      /* 等待 */
+      20%  { opacity: 0; left: -500px; }
+      /* 切入 */
+      25%  { opacity: 1; left: 0px; }
+      /* 展示 */
+      45%  { opacity: 1; left: 0px; }
+      /* 切出 */
+      50%  { opacity: 0; left: 500px; }
+      /* 归位 */
+      51%  { opacity: 0; left: -500px; }
+      /* 等待 */
+      100% { opacity: 0; left: -500px; }
+    }
+    @keyframes switch-slide-3 {
+      0%   { opacity: 0; left: -500px; }
+      /* 等待 */
+      45%  { opacity: 0; left: -500px; }
+      /* 切入 */
+      50%  { opacity: 1; left: 0px; }
+      /* 展示 */
+      70%  { opacity: 1; left: 0px; }
+      /* 切出 */
+      75%  { opacity: 0; left: 500px; }
+      /* 归位 */
+      76%  { opacity: 0; left: -500px; }
+      /* 等待 */
+      100% { opacity: 0; left: -500px; }
+    }
+    @keyframes switch-slide-4 {
+      0%   { opacity: 0; left: -500px; }
+      /* 等待 */
+      70%  { opacity: 0; left: -500px; }
+      /* 切入 */
+      75%  { opacity: 1; left: 0px; }
+      /* 展示 */
+      95%  { opacity: 1; left: 0px; }
+      /* 切出 */
+      100% { opacity: 0; left: 500px; }
+    }
