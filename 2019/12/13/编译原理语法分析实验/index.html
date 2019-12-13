@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+
+
+<head>
+	
+	
+	<link rel="stylesheet" href="/css/allinone.min.css">
+
+	
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>编译原理语法分析实验 心得体会 | 多媒体大作业展示 - 搭建个人博客</title>
+
+	<meta name="HandheldFriendly" content="True">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+	<meta name="generator" content="hexo">
+	<meta name="author" content="徐宗浩">
+	<meta name="description" content>
+
+	
+	<meta name="keywords" content>
+	
+
+	
+	<link rel="shortcut icon" href="https://mubai.oss-cn-hangzhou.aliyuncs.com/icon.png">
+	<link rel="apple-touch-icon" href="https://mubai.oss-cn-hangzhou.aliyuncs.com/icon.png">
+	
+
+	
+	<meta name="theme-color" content="#3c484e">
+	<meta name="msapplication-TileColor" content="#3c484e">
+	
+
+	
+
+	
+	<link rel="alternate" href="https://geekmubai.com/feed" title="多媒体大作业展示 - 搭建个人博客">
+	
+
+	<meta property="og:site_name" content="多媒体大作业展示 - 搭建个人博客">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="编译原理语法分析实验 心得体会 | 多媒体大作业展示 - 搭建个人博客">
+	<meta property="og:description" content>
+	<meta property="og:url" content="http://yoursite.com/2019/12/13/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/">
+
+	
+	<meta property="article:published_time" content="2019-12-13T12:12:00+08:00"> 
+	<meta property="article:author" content="徐宗浩">
+	<meta property="article:published_first" content="多媒体大作业展示 - 搭建个人博客, /2019/12/13/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/">
+	
+</head>
+<body class="post-template">
+	<div class="site-wrapper">
+		
+
+
+
+
+<header class="site-header outer" style="z-index: 999">
+    <div class="inner">
+        
+<nav class="site-nav"> 
+    <div class="site-nav-left">
+        <ul class="nav">
+            <li>
+                
+                <a href="/" title="Home">HOME</a>
+                
+            </li>
+            
+            
+            <li>
+                <a href="/about" title="ABOUT">ABOUT</a>
+            </li>
+            
+            <li>
+                <a href="/archives" title="ARCHIVES">ARCHIVES</a>
+            </li>
+            
+            <li>
+                <a href="/video" title="VIDEO">VIDEO</a>
+            </li>
+            
+            
+        </ul> 
+    </div>
+    
+    <div class="search-button">
+        <a href="#search" class="subscribe-button" style="margin: 0 10px;">Search ...</a>
+    </div>
+     
+    <div class="site-nav-right">
+        
+        <a href="#search" class="subscribe-button" style="margin: 0 10px;">Search ...</a>
+         
+        
+<div class="social-links">
+    
+    
+    <a class="social-link" title="github" href="https://github.com/djgt5h" target="_blank" rel="noopener">
+        <svg viewbox="0 0 1049 1024" xmlns="http://www.w3.org/2000/svg"><path d="M524.979332 0C234.676191 0 0 234.676191 0 524.979332c0 232.068678 150.366597 428.501342 358.967656 498.035028 26.075132 5.215026 35.636014-11.299224 35.636014-25.205961 0-12.168395-0.869171-53.888607-0.869171-97.347161-146.020741 31.290159-176.441729-62.580318-176.441729-62.580318-23.467619-60.841976-58.234462-76.487055-58.234463-76.487055-47.804409-32.15933 3.476684-32.15933 3.476685-32.15933 53.019436 3.476684 80.83291 53.888607 80.83291 53.888607 46.935238 79.963739 122.553122 57.365291 152.97411 43.458554 4.345855-33.897672 18.252593-57.365291 33.028501-70.402857-116.468925-12.168395-239.022047-57.365291-239.022047-259.012982 0-57.365291 20.860106-104.300529 53.888607-140.805715-5.215026-13.037566-23.467619-66.926173 5.215027-139.067372 0 0 44.327725-13.906737 144.282399 53.888607 41.720212-11.299224 86.917108-17.383422 131.244833-17.383422s89.524621 6.084198 131.244833 17.383422C756.178839 203.386032 800.506564 217.29277 800.506564 217.29277c28.682646 72.1412 10.430053 126.029806 5.215026 139.067372 33.897672 36.505185 53.888607 83.440424 53.888607 140.805715 0 201.64769-122.553122 245.975415-239.891218 259.012982 19.121764 16.514251 35.636014 47.804409 35.636015 97.347161 0 70.402857-0.869171 126.898978-0.869172 144.282399 0 13.906737 9.560882 30.420988 35.636015 25.205961 208.601059-69.533686 358.967656-265.96635 358.967655-498.035028C1049.958663 234.676191 814.413301 0 524.979332 0z"/></svg>
+    </a>
+    
+    
+    <a class="social-link" title="facebook" href="https://me.csdn.net/xuzonghao" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1049 1024"><path d="M1141.351404 39.055942l-28.91333 218.474629c-126.144728-19.927251-251.601043-38.376709-377.75495-27.674187-115.460564 9.802996-227.405635 32.180995-309.124802 122.987208-150.018878 166.696821-68.391499 396.461416 158.252293 437.463272 141.115408 25.52634 283.919721 11.785624 425.448176-8.123269-5.452228 112.440727-5.764308 95.303843-10.674985 205.229569-1.073924 24.057726 4.277337 14.612705-161.648461 31.914809-176.004159 9.004437-351.879815 11.189-520.550085-52.888447C156.545029 905.721534 30.675666 809.16019 5.176863 630.815428c-26.251468-183.595056 48.803865-331.796524 192.516883-446.128091C413.36883 13.098197 790.802521-47.271 1141.351404 39.055942z" fill="#ffffff"/></svg>
+    </a>
+    
+    
+    
+    
+    
+</div>
+    </div>
+</nav>
+    </div>
+</header>
+
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+        <header class="post-full-header">
+            <section class="post-full-meta">
+                <time class="post-full-meta-date" datetime="2019-12-13T04:24:12.000Z" itemprop="datePublished">
+                    2019-12-13
+                </time>
+                
+                <span class="date-divider">/</span>
+                
+                
+            </section>
+            <h1 class="post-full-title">编译原理语法分析实验 心得体会</h1>
+        </header>
+        <article class="post-full no-image">
+            
+            <section class="post-full-content">
+                <div id="lightgallery" class="markdown-body">
+                    <h2 id="·引言"><a href="#·引言" class="headerlink" title="·引言"></a>·引言</h2><p>这次的作业在第十三周周五开始，这接近期末的时候，有四门考查课都要准备结课作业啥的，于是时间非常紧张，就希望能够尽快地完成作业。从bison入手，结果在bison上面就花了不少的时间，整晚+熬夜才做完bison。再掉过头来做c++的那一份分析表，因为c++的语法是熟悉的、分析表是自己构造的，所以思路是比bison清晰很多，不过花的时间还是不太少，得有接近四个小时写这两百多行，好久没coding代码能力有所下降了。</p>
+<p>这份文档就以时间顺序，结合做的过程写一些碰到的问题和感想。</p>
+<h2 id="·基于flex-amp-amp-bison构造简单计算器"><a href="#·基于flex-amp-amp-bison构造简单计算器" class="headerlink" title="·基于flex &amp;&amp; bison构造简单计算器"></a>·基于flex &amp;&amp; bison构造简单计算器</h2><p>看了看题目，感觉bison很陌生，应该比较难，就想着先把难啃的做掉，然后时间上是真花了不少。</p>
+<p>上回的flex直到做完了才发现老师已经在平台上发了手册，觉得自己找了好长时间资料还是挺有沉没成本的意思，这次就留心了平台上的资料，然后认真看了实验指导里面拍照放出来的bison相关书的图片，看了一两个小时，感觉收获匪浅，比如很清晰地感受到了“说明”、“语法规则”、“程序段”这三个部分分别的含义。<br>在“说明”部分，要做的顾名思义就是语法分析工作的定义工作，它用于准备语法分析过程的开始，先是定义了开始符、语义值类型、终结符声明，也在这个步骤里面规定了归约的优先次序，做好这些工作，在“语法规则”中制定的规则就可以有所依据地选择归约。当然，在语法规则中提供的语义动作才是我们最后直接能够呈现在结果里面的东西。最后的程序段相当于是把bison写好的一些函数组织起来，实现自己的目的。语法方面，比较陌生的就是定义的语法，像%token用来定义非终结符这样的，和flex功能上有区别。而其他的，像是语义规则，形式上本身就好理解，设计上又和flex同出一脉，看起来还是没有障碍的。</p>
+<p>看完手册里面的十几页书，我感到满脑子都是想法，但是打开编辑器想要动手，结果发现啥都写不出来。理论到实践还是有很大的距离的啊，书上感觉还是以基本的概念为主，为了实操，我还是去找一下资料，看看别人的代码。主要看着这个学感觉不错：<a href="https://blog.csdn.net/qq_35208390/article/details/78249181" target="_blank" rel="noopener">bison计算器相关博客</a></p>
+<p>这也是给我带来很大的一个心得体会：虽然bison本身是一个工具，不过实际上也是一个新的开发手段，不能够想着看十几页文档就直接自己能创造出符合条件的代码了。还是要从别人写好的东西看起，不然理论到实践之间那个桥梁，不靠模仿是搭不起来的。</p>
+<p>说起来，看完了手册后最大的一个疑虑是，bison里面对于非终结符是有默认分配常量的方法的，所以flex里匹配完了只需要返回对应的常量就行了，但是flex和bison如果不能同时编译，不在flex中引用bison，那么是获取不了常量的，比如说，如果INTEGER在bison中分配了270这个数值，但是在flex中是不知道的。虽然感觉可以.l里面宏定义一下，然后在.y文件里手动规定数值，但是这样感觉很生硬，而且有好多量，包括SIN COS LOG等等等等的，手动配置一遍有点傻。还好，在博客里发现了，它在.l文件里面引用bison产生的头文件来解决这个问题，我也就模仿着这么做了。</p>
+<p>实际上最后的实现是有不严谨的地方的，就是这里直接把yylval的值定义成了double，因为这样已经够处理题目里的所有情况了。但是严谨和通用性来考虑的话，写一个union应该是更好的，可惜我尝试的过程中，语法上出了很多知识盲点，尝试过之后，最后还是放弃了。</p>
+<p>这个过程中特别强调要有这句话：<br><code>#define YYSTYPE double</code><br>刚开始做了好久，1 + 1的结果却一直是0，就是因为没有规定yylval的类型，它默认是int型，而读进的时候用了atof转成了浮点型，就出问题了。是0的问题还可能是没有包含stdlib库。</p>
+<p>最后稍微提一下几个技巧，pi我是用2 * asin(1)来表示的，define成数值也一样吧。还有输出的时候，可以用printf(“%g\n”, val)，这个格式会自动选择最优的，小数的输出会去掉无意义的后缀0。</p>
+<h2 id="·基于LR分析表编写语法分析器"><a href="#·基于LR分析表编写语法分析器" class="headerlink" title="·基于LR分析表编写语法分析器"></a>·基于LR分析表编写语法分析器</h2><p>引言里也提到了，做这一部分的时候还是相对思路更加清晰的，时间上算起来也比bison要花得少，大概接近4个小时吧，不过因为这里面用到的语法我大部分都是熟悉的，所以用到这么多时间，实际上还是可以更高效更快地做出来的。</p>
+<p>这一部分的核心其实就是LR分析表，这个头几天在作业里手工制作了，做这个的过程属实可怕。这里面核心的思想就是模拟出作业里用到的，结合Acition-Goto表进行语法分析的过程。还是想再强调一遍，被作业虐过之后再来模拟竟然发现思路上相当清楚，毫无障碍。</p>
+<p>碰到的第一个需要考虑的问题，就是我如何存这张Action-Goto表。这里面我写了一个ActionGoto的类，表示对于确定的项目族、文法符号，对应的动作。这个动作就有可能是归约、移进、接受、goto到某一个项目、出错。这里我用了几个变量分别标识出它是什么类型、操作的数字是什么，并且定义添加数值的方法。构建一个actionGoto[][]对象二维数组，挨个往里面填数据就行。（填数据表的过程非常的机械性和枯燥）。</p>
+<p>对于词法分析部分，刚开始想一边读入一边处理，结果写出问题来了，就是没有把输入串存起来，匹配一次就丢掉了，这样对于归约动作来说就出错了。所以后面还是把词法分析单独拿了出来，先把分析出来的token放在了inQueue里面。这里词法分析我就没有用DFA了，因为这里很好匹配，就往后看一位就可以知道当前这个是什么类型，总共其实就是两大类token，符号和id。</p>
+<p>还需要构建的一个表是产生式的信息表，需要在归约的时候读到两个信息；左部非终结符是什么、右部有几个文法符号（决定要从栈中取出几个元素）。这个我就构建了Production类，构造了production[]对象数组。这里面填值就少多了，毕竟总共6个产生式。</p>
+<p>这些准备工作其实也不是一开始就能想到的，如果直接凭空去想，进行分析之前我需要什么表，哪些变量，那肯定也是想不清楚的，需要去尝试写一些过程，然后发现之前我还需要什么，比如想到需要做动作，知道要把分析表填充起来；想到分析的过程需要操作分析栈和状态栈，就把这两个栈定义好；想到归约的时候需要知道产生式的信息，于是定义Production类。自顶向下逐步求精就是这个意思了。</p>
+<p>移进只要把对应的符号移入状态栈和分析栈就行，归约稍微复杂一些，首先要根据使用的产生式，将对应数量的符号、状态出栈，再根据处理后的状态栈顶状态、待分析的符号，求goto的状态，将其入栈，实际上也没有多几行代码。acc的时候要判断为正确。</p>
+<p>最值得一提的是，因为这里面的词法分析我默认的id定义是，除了文法中已有的终结符，其他任意符号都构成id，比如a+b我的词法分析是id + id，而a-b我的词法分析结果就是id，毕竟产生式里没有-，我也就权当id里允许用-。谁知道测试样例里偷偷塞了一个减号，于是第三个点就挂掉了。之后我判断含有- * /的为非法输入，就可以过掉了。</p>
+<p>方法在课上已经讲述得很详尽之后，coding工作还是不困难的，相比还是基于bison难，啥语法都不会哈哈。</p>
+
+                </div>
+            </section>
+        </article>
+    </div>
+
+    
+    <div style="height: 4vw;width: 100%"></div>
+    <nav id="gobottom" class="pagination">
+        
+        <span class="prev-next-post">•</span>
+        
+        <a class="next-post" title="汇编与接口-8255控制数码管" href="/2019/12/10/%E6%B1%87%E7%BC%96%E5%AE%9E%E9%AA%8C-8255%E6%8E%A7%E5%88%B6%E6%95%B0%E7%A0%81%E7%AE%A1/">
+            汇编与接口-8255控制数码管 →
+        </a>
+        
+    </nav>
+
+    
+    <div class="inner">
+        <div id="comment"></div>
+    </div>
+    
+</main>
+
+<div class="toc-bar">
+    <div class="toc-btn-bar">
+        <a href="#site-main" class="toc-btn">
+            <svg viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M793.024 710.272a32 32 0 1 0 45.952-44.544l-310.304-320a32 32 0 0 0-46.4 0.48l-297.696 320a32 32 0 0 0 46.848 43.584l274.752-295.328 286.848 295.808z"/></svg>
+        </a>
+        <div class="toc-btn toc-switch">
+            <svg class="toc-open" viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M779.776 480h-387.2a32 32 0 0 0 0 64h387.2a32 32 0 0 0 0-64M779.776 672h-387.2a32 32 0 0 0 0 64h387.2a32 32 0 0 0 0-64M256 288a32 32 0 1 0 0 64 32 32 0 0 0 0-64M392.576 352h387.2a32 32 0 0 0 0-64h-387.2a32 32 0 0 0 0 64M256 480a32 32 0 1 0 0 64 32 32 0 0 0 0-64M256 672a32 32 0 1 0 0 64 32 32 0 0 0 0-64"/></svg>
+            <svg class="toc-close hide" viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M512 960c-247.039484 0-448-200.960516-448-448S264.960516 64 512 64 960 264.960516 960 512 759.039484 960 512 960zM512 128.287273c-211.584464 0-383.712727 172.128262-383.712727 383.712727 0 211.551781 172.128262 383.712727 383.712727 383.712727 211.551781 0 383.712727-172.159226 383.712727-383.712727C895.712727 300.415536 723.551781 128.287273 512 128.287273z"/><path d="M557.05545 513.376159l138.367639-136.864185c12.576374-12.416396 12.672705-32.671738 0.25631-45.248112s-32.704421-12.672705-45.248112-0.25631l-138.560301 137.024163-136.447897-136.864185c-12.512727-12.512727-32.735385-12.576374-45.248112-0.063647-12.512727 12.480043-12.54369 32.735385-0.063647 45.248112l136.255235 136.671523-137.376804 135.904314c-12.576374 12.447359-12.672705 32.671738-0.25631 45.248112 6.271845 6.335493 14.496116 9.504099 22.751351 9.504099 8.12794 0 16.25588-3.103239 22.496761-9.247789l137.567746-136.064292 138.687596 139.136568c6.240882 6.271845 14.432469 9.407768 22.65674 9.407768 8.191587 0 16.352211-3.135923 22.591372-9.34412 12.512727-12.480043 12.54369-32.704421 0.063647-45.248112L557.05545 513.376159z"/></svg>
+        </div>
+        <a href="#gobottom" class="toc-btn">
+            <svg viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M231.424 346.208a32 32 0 0 0-46.848 43.584l297.696 320a32 32 0 0 0 46.4 0.48l310.304-320a32 32 0 1 0-45.952-44.544l-286.848 295.808-274.752-295.36z"/></svg>
+        </a>
+    </div>
+    <div class="toc-main">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#·引言"><span class="toc-text">·引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#·基于flex-amp-amp-bison构造简单计算器"><span class="toc-text">·基于flex &amp;&amp; bison构造简单计算器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#·基于LR分析表编写语法分析器"><span class="toc-text">·基于LR分析表编写语法分析器</span></a></li></ol>
+    </div>
+</div>
+
+
+
+	</div>
+	
+
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+            
+
+<article class="read-next-card" style="background-image: url(https://mubai.oss-cn-hangzhou.aliyuncs.com/background.jpg)">
+  <header class="read-next-card-header">
+    <small class="read-next-card-header-sitetitle">&mdash; 多媒体大作业展示 - 搭建个人博客 &mdash;</small>
+    <h3 class="read-next-card-header-title">Recent Posts</h3>
+  </header>
+  <div class="read-next-divider">
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+      <path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/>
+    </svg>
+  </div>
+  <div class="read-next-card-content">
+    <ul>
+      
+      
+      
+      <li>
+        <a href="/2019/12/13/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/">编译原理语法分析实验 心得体会</a>
+      </li>
+      
+      
+      
+      <li>
+        <a href="/2019/12/10/%E6%B1%87%E7%BC%96%E5%AE%9E%E9%AA%8C-8255%E6%8E%A7%E5%88%B6%E6%95%B0%E7%A0%81%E7%AE%A1/">汇编与接口-8255控制数码管</a>
+      </li>
+      
+      
+      
+      <li>
+        <a href="/2019/12/08/Self-Introduction/">自我介绍[置顶]</a>
+      </li>
+      
+      
+      
+      
+    </ul>
+  </div>
+  <footer class="read-next-card-footer">
+    <a href="/archives">  MORE  → </a>
+  </footer>
+</article>
+
+            
+            
+            
+
+
+            
+            
+            
+
+<article class="read-next-card" style="background-image: url(https://mubai.oss-cn-hangzhou.aliyuncs.com/background.jpg)">
+	<header class="read-next-card-header" style="padding-bottom: 20px">
+		<h3 class="read-next-card-header-title">Tag Cloud</h3>
+	</header>
+	<div class="read-next-card-content-ext">
+		<a href="/tags/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%B8%8E%E6%8E%A5%E5%8F%A3%E6%8A%80%E6%9C%AF/" style="font-size: 14px;">汇编语言与接口技术</a> <a href="/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" style="font-size: 24px;">编译原理</a> <a href="/tags/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/" style="font-size: 14px;">自我介绍</a>
+	</div>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+	
+
+
+
+
+<div id="search" class="search-overlay subscribe-overlay">
+    <div class="search-form">
+        
+        <img class="search-overlay-logo" src="https://mubai.oss-cn-hangzhou.aliyuncs.com/icon.png" alt="多媒体大作业展示 - 搭建个人博客">
+        
+        <input id="local-search-input" class="search-input" type="text" name="search" placeholder="Search ...">
+        <a class="search-overlay-close" href="#"></a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<footer class="site-footer outer">
+	<div class="site-footer-content inner">
+		<section class="copyright">
+			<a href="/" title="多媒体大作业展示 - 搭建个人博客">多媒体大作业展示 - 搭建个人博客</a>
+			&copy; 2019
+		</section>
+		<nav class="site-footer-nav">
+			
+            <a href="http://www.miitbeian.gov.cn/" title="皖ICP备17018037号" target="_blank" rel="noopener">皖ICP备17018037号</a>
+            <a href="https://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+            <a href="https://geekmubai.com/" title="GeekMubai" target="_blank" rel="noopener">GeekMubai</a>
+        </nav>
+    </div>
+</footer>
+	
+
+
+<script>
+    if(window.navigator && navigator.serviceWorker) {
+        navigator.serviceWorker.getRegistrations()
+        .then(function(registrations) {
+            for(let registration of registrations) {
+                registration.unregister();
+            }
+        });
+    }
+</script>
+
+
+
+
+
+
+
+<div class="floating-header">
+	<div class="floating-header-logo">
+        <a href="/" title="多媒体大作业展示 - 搭建个人博客">
+			
+                <img src="https://mubai.oss-cn-hangzhou.aliyuncs.com/icon.png" alt="多媒体大作业展示 - 搭建个人博客 icon">
+			
+            <span>多媒体大作业展示 - 搭建个人博客</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">编译原理语法分析实验 心得体会</div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+
+
+
+<script src="/js/mix/post-lazy-local.min.js"></script>
+
+<script>;(function() {var bLazy = new Blazy()})();</script>
+
+
+
+
+<script src="/js/lightgallery.min.js"></script>
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+<script>
+    lightGallery(document.getElementById('lightgallery'), {
+        selector: '.post-img'
+    });
+</script>
+
+
+
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#comment' ,
+        verify: false,
+        notify: false,
+        appId: '6OwzWKQyqJ4WaCkG595jFgOk-gzGzoHsz',
+        appKey: 'KBVcOKdIAEMp8BrbFffxfrfQ',
+        placeholder: '你是魔鬼吧，都不留言！',
+        pageSize: 10,
+        avatar: 'mm',
+        visitor: true,
+    });
+</script>
+
+
+
+
+
+
+<script>searchFunc("/")</script>
+
+
+
+
+
+</body>
+</html>
