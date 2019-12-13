@@ -147,7 +147,7 @@
 <h2 id="真实心得"><a href="#真实心得" class="headerlink" title="真实心得"></a>真实心得</h2><h3 id="1-基于flex构造词法分析器"><a href="#1-基于flex构造词法分析器" class="headerlink" title="1. 基于flex构造词法分析器"></a>1. 基于flex构造词法分析器</h3><p>刚开始看到要基于flex构造词法分析器还是很头疼的，因为是一种新的工具。开始动手得比较早，也没注意看老师在平台发布的资料，就报着要学新东西的沉重心态开始百度flex。</p>
 <p>最先对我产生帮助的是<a href="https://blog.csdn.net/pfl_327/article/details/83148040" target="_blank" rel="noopener">这篇博客</a>，它通过简单的示范代码、详细的步骤来演示如何让flex工作，我按照它的步骤完成了输入输出。还好之前有过命令行编译.cpp文件的经历，所以对这个工具的用法不至于太陌生，配合配置好的环境变量，我就可以用指令：<code>win_flex do.lex &amp;&amp; gcc lex.yy.c &amp;&amp; a</code>直接运行生成的.exe文件了。</p>
 <p>通过读他的示范代码，我就大概理解了flex代码的编写主要就是通过正则表达式来匹配想要匹配的内容，然后在行为上定义匹配后的动作是什么。支持在模块中定义自己需要使用的C变量和代码。</p>
-<p>这样的话，根据已有的C基础，我需要学习flex的编码格式。这部分我首先是找到了<a href="https://blog.csdn.net/mist14/article/details/48641349" target="_blank" rel="noopener">这篇博客</a>,我就知道了%%分隔开来的三部分分别是定义、匹配规则、定义函数。所以在第一部分进行正则匹配的定义、第二部分执行相应的规则、最后定义主函数的操作就行。<br>此外，一些使用方法，特别是匹配<code>/**/</code>的注释部分，我从<a href="https://wenku.baidu.com/view/42c24413360cba1aa911da7f.html" target="_blank" rel="noopener">官方文档</a>里面找到思路。</p>
+<p>这样的话，根据已有的C基础，我需要学习flex的编码格式。这部分我首先是找到了<a href="https://blog.csdn.net/mist14/article/details/48641349" target="_blank" rel="noopener">这篇博客</a>,我就知道了%%分隔开来的三部分分别是定义、匹配规则、定义函数。所以在第一部分进行正则匹配的定义、第二部分执行相应的规则、最后定义主函数的操作就行。此外，一些使用方法，特别是匹配<code>/**/</code>的注释部分，我从<a href="https://wenku.baidu.com/view/42c24413360cba1aa911da7f.html" target="_blank" rel="noopener">官方文档</a>里面找到思路。</p>
 <p>关于实现，每匹配到一个token就手动添加一次结果有点麻烦了，在flex中，第一部分之前还支持在<code>%{  %}</code>之间定义一些动作中需要用到的函数和变量，在这部分我定义了rightout errorout两个变量用来存储最后的输出（其实后来发现只要一个输出变量就行了，所以手动构造的那个里面就只用了一个），lines变量用来找到行数，还定义了addrightout adderrorout来向两个用于输出的变量写入内容，这样匹配到字符串以后，定义的动作里面只要调用一下函数就可以了。</p>
 <p>最后主函数里面，根据是否有错，输出统计好的变量就行。这里主函数因为是自己定义的，需要重写一下yywrap函数，返回1。刚开始看到报错说yywrap未定义我是懵的，还好这个问题百度一下就能找到，其实在上面的博客里面也是有的。</p>
 <p>最后能过掉还是挺开心的，就是有几个warning没有去掉，从一方面来说这个部分锻炼了我学习新工具的能力，但是从这几个warning也看出了我读手册、收集信息的能力还有待提高啊。</p>
@@ -375,8 +375,8 @@
         el: '#comment' ,
         verify: false,
         notify: false,
-        appId: '6OwzWKQyqJ4WaCkG595jFgOk-gzGzoHsz',
-        appKey: 'KBVcOKdIAEMp8BrbFffxfrfQ',
+        appId: 'C5wTsBLFRVCd8IyO0fPoOzgv-MdYXbMMI',
+        appKey: 'RhV5JO6AjGENMERvTEDrKL9d',
         placeholder: '你是魔鬼吧，都不留言！',
         pageSize: 10,
         avatar: 'mm',
